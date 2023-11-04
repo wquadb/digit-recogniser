@@ -4,10 +4,6 @@ import pandas as pd
 from PIL import Image as im
 from scipy.special import softmax
 
-#
-# Makar wassup
-
-#TO FIX
 def vecs_to_img(array, fromim: int, toim: int):
     scale = (toim - fromim + 1) * 28
     c = array
@@ -110,22 +106,6 @@ def get_accuracy(A2, Y0):
     pred = np.argmax(A2, 0) 
     return np.sum(pred == Y0) / Y0.size
 
-
-if __name__ == "__main__":
-
-    data_learn_pixels, data_learn_answers = get_data('mnist_train.csv')
-
-    vecs_to_img(data_learn_pixels.T, 59998, 59999)
-
-    data_learn_answers
-
-
-
-
-
-
-
-#GRADIENT DESCENT
 def main():
 
     data_learn_pixels, data_learn_answers = get_data('mnist_train.csv')
@@ -150,3 +130,8 @@ def main():
 
     return w1, w2, b1, b2
 
+if __name__ == "__main__":
+    
+    data_learn_pixels, data_learn_answers = get_data('mnist_train.csv')
+
+    vecs_to_img(data_learn_pixels.T, 0, 0)
