@@ -4,6 +4,9 @@ import pandas as pd
 from PIL import Image as im
 from scipy.special import softmax
 
+#
+# Makar wassup
+
 #TO FIX
 def vecs_to_img(array, fromim: int, toim: int):
     scale = (toim - fromim + 1) * 28
