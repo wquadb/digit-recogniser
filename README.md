@@ -30,31 +30,29 @@ gets 85 as it starts (which quite strange and incomprehensible) and reach 0.9 as
 
 LOGIC
 
-0. zero_layer 
+ 
 {
-    # input layer
-
+    # input layer (zero_layer)
+} 
     A0 := matrix(60.000x784) 
     (columns=vector_image(each element is i-th pixel), rows=images)
-}
-1. first_layer 
-{
-    # hidden layer
 
+{
+    # hidden layer (first_layer)
+}
     w1 := matrix(784x10) of coeficients multiplying each connection between two nodes  
     b1 := matrix(10x1) bias of each node (constant adding to i-th node result)
     Z1 := matrix(10x1) result vector of scalar multiplication of w1 * A0 + b1
     A1 := matrix(10x1) ReLU(Z1) (ReLU() function defined and explained in code)
-}
-2. second_layer 
-{
-    # output layer
 
+{
+    # output layer (second_layer)
+}
     w2 := matrix(10x10) (exactly the same to first one but different connections)
     b2 := matrix(10x1) bias of each node 
     Z2 := matrix(10x1) result vector of scalar multiplication of w2 * A1 + b2
     A2 := matrix(10x1) (softmax(Z2) function defined and explained in code)
-}
+
 
 
 
