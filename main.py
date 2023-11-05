@@ -90,7 +90,7 @@ def backward_propagation(Y0, w1, w2, b1, b2, A0, A1, A2, Z1, Z2):
     # db1 and db2 are 10x1 but when we do not reshape 
     # np.info() tells: 
     # db1.shape() = (10,) | db2.shape() = (10,)
-    # the it breakes with no reason (b1, b2 shapes gets (10,10) from (10,1) )
+    # then it breakes with no reason (b1, b2 shapes gets (10,10) from (10,1) )
     # stack overflow suggest this article about this issue in numpy:
     # https://stackoverflow.com/questions/22053050/difference-between-numpy-array-shape-r-1-and-r
 
